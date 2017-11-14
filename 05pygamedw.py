@@ -19,10 +19,12 @@ while not gameExit:
 	gameDisplay.fill(white)
 	pygame.draw.rect(gameDisplay, black, [400,300,10,100]) 
 	'''where to draw, color, [placex,placey,sizex,sizey]
-	place = top left corner placement of object, and size goes out towards the
-	bottom right. a game display's top left is 0,0. There's a way to do this
-	with fill that's a little bit better optimised, but this should be fine. 
-	Google it if you want to use that method.'''
+	Note that on a computer, 0,0 is actually the top left corner, instead of
+	the bottom left. In math it's the bottom right, but in computers they
+	think down. Size fills out towards the bottom right.
+	There's a way to do this with the fill function that's a little bit better
+	optimised, but this should be fine. Google it if you want to use that 
+	method.'''
 	pygame.display.update();
 
 pygame.quit()

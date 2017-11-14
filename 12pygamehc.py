@@ -5,7 +5,7 @@ An important part of programming is making your program extensible -
 making it so that other people can re-program it. Right now, say, if you were
 to try to change the size of our character, you would have to change the size
 in draw.rect, under the event.key == direction (because it moves one body 
-length), et cetera.'''
+length), et cetera. We're gonna move a bunch of things to variables.'''
 pygame.init()
 
 white = (255, 255, 255)

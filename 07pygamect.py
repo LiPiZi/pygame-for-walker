@@ -14,6 +14,7 @@ gameExit = False
 char_x = 300
 char_y = 300
 char_x_change = 0
+'''Look up there'''
 while not gameExit: #gameloop
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
@@ -21,9 +22,9 @@ while not gameExit: #gameloop
 		if event.type == pygame.KEYDOWN: #movement
 			if event.key == pygame.K_LEFT: 
 				char_x_change = -10 
-				'''choppy movement was because you only press the key down,
+				'''Choppy movement was because you only press the key down,
 				moving it once. Let's work on that. First, we'll change
-				the value of change (calculus, anybody?)'''
+				the value/rate of change (calculus, anybody?)'''
 			if event.key == pygame.K_RIGHT:
 				char_x_change = 10
 				'''note that it is no longer +=, instead set equal.'''

@@ -1,11 +1,11 @@
-'''two ways of drawing to the screen, sprites and drawing.
-I removed the comments. Should be known by now, and nothing is
-complex enough to really be commented on.'''
+'''two ways of putting images on the screen, sprites and drawing.
+	I removed some of the old documentation.'''
 import sys, pygame
 
 pygame.init()
 
-'''Defining colors in a tuple. Learn RGB.'''
+'''Defining colors in a tuple. If you don't know RGB, I'd look it up and get
+	a feel for it.'''
 white = (255, 255, 255)
 black = (0, 0, 0)
 red = (255, 0, 0)
@@ -21,9 +21,12 @@ while not gameExit:
 			gameExit = True
 			
 	gameDisplay.fill(white)
-	'''Make entire screen white. That means use it as a background.'''
+	'''Make entire screen white. That means use it as a background. Remember
+	we defined white earlier.'''
 	pygame.display.update();
-	'''put after everything you want to draw. Will make it.'''
+	'''This refreshes the screen. If you draw something and don't refresh the
+	the loop repeats 30 times a second at 30fps.'''
+	screen at the end of the frame, then it will not be shown. Remember that
 
 pygame.quit()
 quit()

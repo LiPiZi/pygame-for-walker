@@ -16,7 +16,8 @@ char_y = 300
 char_x_change = 0
 
 clock = pygame.time.Clock()
-'''pygame has a built in clock! Let's define the object.'''
+'''pygame has a built in clock! Let's make a clock object, and call it clock.
+	'''
 
 while not gameExit: #gameloop
 	for event in pygame.event.get():
@@ -35,9 +36,10 @@ while not gameExit: #gameloop
 	pygame.display.update()
 	
 	clock.tick(10)
-	'''this is the fps variable. Since the original documentation I'm
-	basing this off of is a snake game, it has very low fps. we might
-	raise the fps and lower the movement speed in the future.'''
+	'''This is the Frames-Per-Second variable. Since the original 
+	documentation. I'm basing this off of is a snake game, it has very low 
+	fps. You can also increase the char_x_change values under the if
+	statements.	It's mildly hardcoded, we'll get to that.'''
 #LOOP END
 pygame.quit()
 quit()

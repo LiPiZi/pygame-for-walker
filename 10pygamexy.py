@@ -41,7 +41,7 @@ while not gameExit: #gameloop
 			therefore it is redundant to check.'''
 	char_x += char_x_change
 	char_y += char_y_change
-	'''remember this guy'''
+	'''remember this guy, we're adding the y variables here too.'''
 	gameDisplay.fill(white) #bg
 	pygame.draw.rect(gameDisplay, black, [char_x,char_y,10,10])
 	pygame.display.update()

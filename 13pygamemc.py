@@ -1,11 +1,11 @@
 import sys
 import pygame
 '''We're gonna do a little bit more readability work. first off, we separate
-the import statements, which is generally good manners.'''
+	the import statements, which is generally good manners.'''
 
 
 '''Here we define main(). It's everything other than the import statements.
-'''
+	'''
 def main():
 	pygame.init()
 
@@ -60,7 +60,9 @@ def main():
 		pygame.draw.rect(gameDisplay,black,[char_x,char_y,block_size, \
 		block_size])
 		'''back slashes can be used to separate lines, so that they don't
-		go over the pip 79 character limit.'''
+		go over the pip 79 character limit. Not going over 79 characters is
+		good manners because people like to program on one side of their
+		screen.'''
 		pygame.display.update()
 		
 		clock.tick(fps)

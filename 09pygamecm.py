@@ -30,8 +30,9 @@ while not gameExit: #gameloop
 				char_x_change += 4
 			if event.key == pygame.K_RIGHT:
 				char_x_change -= 4
-		'''This is how you'd do it if you wanted to make a game with normal, game like 
-		moving, stopping, etc. We're making a snake game, though.'''
+		'''This is how you'd do it if you wanted to make a game with normal,
+		game like moving, stopping, etc. We're making a snake game, though. 
+		If you wish, you can make a game using this.'''
 	char_x += char_x_change 
 	
 	gameDisplay.fill(white) #bg
