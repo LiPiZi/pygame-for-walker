@@ -2,8 +2,16 @@ import sys
 import pygame
 import random
 
+'''snake game. Now we're eating an apple, so making it disapear, and then
+	making a new apple in a random location, and then making the snake gain 
+	some length.'''
 
-
+def newAppleX(dw ,bs):
+	return round(random.randrange(0,(dw-bs)/10.0))*10.0
+def newAppleY(dh ,bs):
+	return round(random.randrange(0,(dh-bs)/10.0))*10.0	
+'''We'll do some functions just for fun. We're going too fast to explain 
+	everything about them, '''
 def main():
 	pygame.init()
 
@@ -31,11 +39,9 @@ def main():
 
 	fps = 10
 	
-	randAppleX = round(random.randrange(0,(disp_width-block_size)/10.0))*10.0
-	randAppleY = round(random.randrange(0,(disp_height-block_size)/10.0))*10.0
-	'''A little bit complicated. This is making it so that the apple will be
-	on the same grid as the snake.'''
-	
+	#randAppleX = round(random.randrange(0,(disp_width-block_size)/10.0))*10.0
+	#randAppleY = round(random.randrange(0,(disp_height-block_size)/10.0))*10.0
+	'''let's make these a function, just for fun, since we're making this twice.'''
 	while not gameExit: #gameloop
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
@@ -69,10 +75,7 @@ def main():
 		
 		if char_x == randAppleX and char_y == randAppleY:
 			print("eat food")
-		'''Collision between the snake and the apple. This is easy because our
-		objects are identical in size. You won't always be able to do it like
-		that. See:
-		https://www.youtube.com/watch?v=L8VE7o4wkM0 for the tutorial.'''
+
 		clock.tick(fps)
 	#LOOP END
 	pygame.quit()
