@@ -2,7 +2,7 @@ import sys
 import pygame
 import random
 
-'''snake game. Now we're eating an apple, so making it disapear, and then
+'''snake game. Now we're eating an apple, so making it disappear, and then
 	making a new apple in a random location, and then making the snake gain 
 	some length.'''
 
@@ -11,7 +11,9 @@ def newAppleX(dw ,bs):
 def newAppleY(dh ,bs):
 	return round(random.randrange(0,(dh-bs)/10.0))*10.0	
 '''We'll do some functions just for fun. We're going too fast to explain 
-	everything about them, '''
+	everything about them, but know that they are for the purpose of
+	organizing code. 'return' means that the function is used with an 
+	"=" operator - similar to a = 1+1.'''
 def main():
 	pygame.init()
 
@@ -39,6 +41,11 @@ def main():
 
 	fps = 10
 	
+	score = 0
+	'''of course, now we have to add a score'''
+	
+	randAppleX = newAppleX(disp_width, block_size)
+	randAppleY = newAppleY(disp_height, block_size)
 	#randAppleX = round(random.randrange(0,(disp_width-block_size)/10.0))*10.0
 	#randAppleY = round(random.randrange(0,(disp_height-block_size)/10.0))*10.0
 	'''let's make these a function, just for fun, since we're making this twice.'''
@@ -74,8 +81,12 @@ def main():
 		pygame.display.update()
 		
 		if char_x == randAppleX and char_y == randAppleY:
-			print("eat food")
-
+			score += 1
+			print("Score: " + str(score))
+			randAppleX = newAppleX(disp_width, block_size)
+			randAppleY = newAppleY(disp_height, block_size)
+			'''Since this code loops around, it will re-draw the apple
+			in the right place.'''
 		clock.tick(fps)
 	#LOOP END
 	pygame.quit()
